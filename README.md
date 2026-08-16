@@ -2,6 +2,10 @@
 
 关卡 6 的公开演示网站。页面展示 Agent 定位、证据规则、2026-08-16 真实运行快照和可下载产出。
 
+公开地址：<https://short-drama-market-agent-web.vercel.app>
+
+扣子与百度发布迁移说明见 [`docs/COZE-BAIDU-PUBLISHING.md`](docs/COZE-BAIDU-PUBLISHING.md)。
+
 ## 本地运行
 
 ```powershell
