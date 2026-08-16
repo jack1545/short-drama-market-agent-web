@@ -20,7 +20,7 @@
       </a>
       <nav aria-label="主导航">
         <a href="#capabilities">能力</a>
-        <a href="#demo">运行演示</a>
+        <a href="#demo">完整实例</a>
         <a href="#sources">证据</a>
       </nav>
       <a class="nav-action" href="/downloads/2026-08-16-short-drama-market-report.md" download>下载报告</a>
@@ -32,7 +32,7 @@
         <h1><span>读懂海外短剧热度，</span><span>不替数据说谎</span></h1>
         <p class="hero-text">监控作品、平台与题材信号，输出带来源、置信度和缺口的可追溯报告。</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#demo">运行演示</a>
+          <a class="button button-primary" href="#demo">查看 3 个实例</a>
           <a class="button button-secondary" href="#evidence">查看方法</a>
         </div>
       </div>
@@ -42,9 +42,9 @@
     </section>
 
     <section class="proof-strip" aria-label="运行状态">
-      <div><strong>1</strong><span>次飞书真实运行</span></div>
+      <div><strong>3</strong><span>个完整任务实例</span></div>
       <div><strong>6+</strong><span>类公开来源</span></div>
-      <div><strong>5</strong><span>份可下载产出</span></div>
+      <div><strong>7</strong><span>份可下载产出</span></div>
       <div class="live-state"><span class="status-dot" aria-hidden="true"></span><strong>ONLINE</strong><span>公开演示可用</span></div>
     </section>
 
@@ -75,12 +75,24 @@
 
     <section class="section demo-section" id="demo">
       <div class="demo-intro">
-        <h2>运行一次公开演示</h2>
-        <p>演示读取 2026-08-16 的真实快照，不调用公开模型接口，不产生额外 Token 费用。</p>
+        <p class="eyebrow">Three complete cases</p>
+        <h2>从问题到决策，完整走三遍</h2>
+        <p>三个实例均读取 2026-08-16 的已验证快照。实例 01 复盘真实飞书任务，实例 02–03 是基于同一快照的专题分析；网页不实时调用模型，也不产生额外 Token 费用。</p>
+        <div class="case-tabs" role="tablist" aria-label="选择任务实例">
+          <button class="case-tab is-active" type="button" role="tab" aria-selected="true" data-case="market">
+            <span>01 · 真实任务复盘</span><strong>每日行情全景监控</strong>
+          </button>
+          <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="genre">
+            <span>02 · 专题分析</span><strong>题材机会评估</strong>
+          </button>
+          <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="competitor">
+            <span>03 · 决策分析</span><strong>平台竞品对比</strong>
+          </button>
+        </div>
         <form id="demo-form" novalidate>
-          <label for="task">监控任务</label>
+          <label for="task">任务输入</label>
           <textarea id="task" aria-describedby="task-help" rows="4">生成今日海外短剧行情试运行报告，并给出三条建议</textarea>
-          <p id="task-help" class="form-help">输入任务后，演示会返回已验证快照中的结构化结果。</p>
+          <p id="task-help" class="form-help">可修改文字；实例仍按所选案例的已验证数据结构演示。</p>
           <p class="form-error" id="form-error" role="alert" hidden>请先输入监控任务。</p>
           <button class="button button-primary" id="run-button" type="submit">开始运行</button>
         </form>
@@ -105,37 +117,24 @@
         </div>
         <div class="result-state" id="result-state" hidden>
           <div class="result-header">
-            <div><span>RUN COMPLETE</span><h3>海外短剧行情试运行报告</h3></div>
-            <strong>2026-08-16</strong>
+            <div><span id="result-kind">RUN COMPLETE</span><h3 id="result-title">海外短剧行情试运行报告</h3></div>
+            <strong id="result-date">2026-08-16</strong>
           </div>
-          <div class="finding-list">
-            <article>
-              <div><span>市场</span><b>置信度 中</b></div>
-              <h4>头部平台继续扩大规模</h4>
-              <p>公开报告指向 Q1 2026 全球短剧 App 约 8.5 亿下载与 7.5 亿美元内购。</p>
-            </article>
-            <article>
-              <div><span>题材</span><b>置信度 中-高</b></div>
-              <h4>狼人和复仇仍是稳定钩子</h4>
-              <p>狼人保持 Western 市场强势，重生复仇与女性觉醒信号继续上升。</p>
-            </article>
-            <article>
-              <div><span>增量</span><b>置信度 中</b></div>
-              <h4>AI 短剧进入快速扩张期</h4>
-              <p>NetShort、DramaWave 等平台的 AI 内容和素材投放形成新增观察线。</p>
-            </article>
+          <div class="run-context">
+            <article><span>输入</span><p id="result-input"></p></article>
+            <article><span>处理过程</span><p id="result-process"></p></article>
+            <article><span>最终产出</span><p id="result-output"></p></article>
           </div>
+          <div class="finding-list" id="result-findings"></div>
           <div class="works-block">
             <div class="works-heading">
-              <h4>热门作品观察名单</h4>
-              <button type="button" id="toggle-works" aria-expanded="false">查看全部 10 部</button>
+              <h4 id="detail-title">热门作品观察名单</h4>
+              <button type="button" id="toggle-works" aria-expanded="false">查看全部</button>
             </div>
             <div class="work-grid" id="work-grid"></div>
           </div>
-          <div class="result-actions">
-            <a href="/downloads/2026-08-16-short-drama-market-report.md" download>下载完整报告</a>
-            <a href="/downloads/2026-08-16-short-drama-snapshot.json" download>下载 JSON 快照</a>
-          </div>
+          <div class="case-limit"><strong>限制</strong><p id="result-limit"></p></div>
+          <div class="result-actions" id="result-actions"></div>
         </div>
       </div>
     </section>
