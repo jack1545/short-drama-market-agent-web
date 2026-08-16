@@ -237,6 +237,41 @@ form .button { justify-self: start; margin-top: 6px; }
 .case-limit strong { font-size: 13px; }
 .case-limit p { margin: 7px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
 
+.cases-section { width: min(1400px, calc(100% - 48px)); }
+.cases-heading { max-width: 820px; margin-bottom: 48px; }
+.cases-heading > p:last-child { max-width: 68ch; color: var(--muted); font-size: 18px; line-height: 1.65; }
+.case-list { display: grid; gap: 14px; }
+.case-instance { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+.case-instance summary {
+  min-height: 112px; padding: 24px 28px; display: grid; grid-template-columns: 56px 1fr auto;
+  gap: 22px; align-items: center; cursor: pointer; list-style: none; transition: background 180ms ease;
+}
+.case-instance summary::-webkit-details-marker { display: none; }
+.case-instance summary:hover { background: color-mix(in srgb, var(--accent-soft) 40%, var(--surface)); }
+.case-instance summary:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: -3px; }
+.case-number { font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace; font-size: 24px; color: var(--accent-strong); }
+.case-summary { display: grid; gap: 7px; }
+.case-summary small { color: var(--muted); font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace; font-size: 11px; }
+.case-summary strong { font-size: clamp(21px, 2.5vw, 32px); letter-spacing: -0.035em; }
+.case-toggle { min-width: 112px; color: var(--accent-strong); font-size: 13px; font-weight: 650; text-align: right; }
+.case-instance[open] .case-toggle::before { content: "— "; }
+.case-instance:not([open]) .case-toggle::before { content: "+ "; }
+.case-instance[open] .when-closed, .case-instance:not([open]) .when-open { display: none; }
+.case-body { padding: 0 28px 28px; border-top: 1px solid var(--line); }
+.case-context { display: grid; grid-template-columns: repeat(3, 1fr); }
+.case-context article { padding: 26px 22px 26px 0; }
+.case-context article + article { padding-left: 22px; border-left: 1px solid var(--line); }
+.case-context span, .case-findings span { color: var(--accent-strong); font-family: "Cascadia Mono", "SFMono-Regular", Consolas, monospace; font-size: 11px; }
+.case-context p { margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.case-findings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 24px 0; border-top: 1px solid var(--line); }
+.case-findings article { padding: 22px; border-radius: 11px; background: var(--surface-2); }
+.case-findings h3 { margin: 18px 0 9px; font-size: 19px; letter-spacing: -0.025em; }
+.case-findings p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.case-footer { padding-top: 22px; display: flex; justify-content: space-between; gap: 28px; align-items: center; border-top: 1px solid var(--line); }
+.case-footer > p { max-width: 68ch; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.case-footer > div { display: flex; gap: 20px; flex-shrink: 0; }
+.case-footer a { color: var(--accent-strong); font-size: 14px; font-weight: 650; }
+
 .evidence-section { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 96px; align-items: start; }
 .evidence-copy { position: sticky; top: 40px; }
 .method-flow { display: grid; gap: 16px; }
@@ -274,6 +309,10 @@ footer span { color: var(--muted); font-family: "Cascadia Mono", "SFMono-Regular
   .capability-grid article { min-height: 220px; }
   .demo-section, .evidence-section { grid-template-columns: 1fr; gap: 48px; }
   .demo-intro, .evidence-copy { position: static; }
+  .case-context, .case-findings { grid-template-columns: 1fr; }
+  .case-context article { padding: 20px 0; }
+  .case-context article + article { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .case-footer { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 620px) {
@@ -299,6 +338,10 @@ footer span { color: var(--muted); font-family: "Cascadia Mono", "SFMono-Regular
   .method-flow > div, .limitations { grid-template-columns: 1fr; }
   .result-actions, footer { flex-direction: column; }
   .footer-links { flex-wrap: wrap; }
+  .case-instance summary { min-height: 96px; padding: 20px 18px; grid-template-columns: 40px 1fr; gap: 12px; }
+  .case-toggle { grid-column: 2; min-width: 0; text-align: left; }
+  .case-body { padding: 0 18px 20px; }
+  .case-footer > div { flex-direction: column; gap: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

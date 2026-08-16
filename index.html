@@ -9,7 +9,6 @@
   <meta property="og:description" content="可追溯的海外短剧榜单、趋势变化和风险提示。">
   <meta property="og:image" content="/assets/market-intelligence-hero.png">
   <link rel="stylesheet" href="/styles.css">
-  <script src="/script.js" defer></script>
 </head>
 <body>
   <main>
@@ -73,69 +72,76 @@
       </div>
     </section>
 
-    <section class="section demo-section" id="demo">
-      <div class="demo-intro">
-        <p class="eyebrow">Three complete cases</p>
-        <h2>从问题到决策，完整走三遍</h2>
+    <section class="section cases-section" id="demo">
+      <div class="cases-heading">
+        <p class="eyebrow">Three independent cases</p>
+        <h2>三个实例，分别打开，分别核验</h2>
         <p>三个实例均读取 2026-08-16 的已验证快照。实例 01 复盘真实飞书任务，实例 02–03 是基于同一快照的专题分析；网页不实时调用模型，也不产生额外 Token 费用。</p>
-        <div class="case-tabs" role="tablist" aria-label="选择任务实例">
-          <button class="case-tab is-active" type="button" role="tab" aria-selected="true" data-case="market">
-            <span>01 · 真实任务复盘</span><strong>每日行情全景监控</strong>
-          </button>
-          <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="genre">
-            <span>02 · 专题分析</span><strong>题材机会评估</strong>
-          </button>
-          <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="competitor">
-            <span>03 · 决策分析</span><strong>平台竞品对比</strong>
-          </button>
-        </div>
-        <form id="demo-form" novalidate>
-          <label for="task">任务输入</label>
-          <textarea id="task" aria-describedby="task-help" rows="4">生成今日海外短剧行情试运行报告，并给出三条建议</textarea>
-          <p id="task-help" class="form-help">可修改文字；实例仍按所选案例的已验证数据结构演示。</p>
-          <p class="form-error" id="form-error" role="alert" hidden>请先输入监控任务。</p>
-          <button class="button button-primary" id="run-button" type="submit">开始运行</button>
-        </form>
       </div>
 
-      <div class="run-panel" aria-live="polite">
-        <div class="empty-state" id="idle-state">
-          <span>READY</span>
-          <h3>等待任务</h3>
-          <p>运行后将显示市场变化、作品观察名单、题材趋势与数据缺口。</p>
-        </div>
-        <div class="loading-state" id="loading-state" aria-label="正在运行" hidden>
-          <div class="skeleton skeleton-wide"></div>
-          <div class="skeleton"></div>
-          <div class="skeleton"></div>
-          <div class="skeleton skeleton-short"></div>
-        </div>
-        <div class="empty-state error-state" id="error-state" hidden>
-          <span>INPUT REQUIRED</span>
-          <h3>任务不能为空</h3>
-          <p>补充一句你希望监控的市场问题，再次运行。</p>
-        </div>
-        <div class="result-state" id="result-state" hidden>
-          <div class="result-header">
-            <div><span id="result-kind">RUN COMPLETE</span><h3 id="result-title">海外短剧行情试运行报告</h3></div>
-            <strong id="result-date">2026-08-16</strong>
-          </div>
-          <div class="run-context">
-            <article><span>输入</span><p id="result-input"></p></article>
-            <article><span>处理过程</span><p id="result-process"></p></article>
-            <article><span>最终产出</span><p id="result-output"></p></article>
-          </div>
-          <div class="finding-list" id="result-findings"></div>
-          <div class="works-block">
-            <div class="works-heading">
-              <h4 id="detail-title">热门作品观察名单</h4>
-              <button type="button" id="toggle-works" aria-expanded="false">查看全部</button>
+      <div class="case-list">
+        <details class="case-instance" open>
+          <summary>
+            <span class="case-number">01</span>
+            <span class="case-summary"><small>真实飞书任务复盘</small><strong>每日海外短剧行情全景监控</strong></span>
+            <span class="case-toggle"><span class="when-open">收起实例</span><span class="when-closed">展开完整实例</span></span>
+          </summary>
+          <div class="case-body">
+            <div class="case-context">
+              <article><span>任务输入</span><p>生成今日海外短剧行情试运行报告，并给出三条建议。</p></article>
+              <article><span>处理过程</span><p>采集 6+ 类公开来源，统一平台、作品、题材和指标口径，完成证据分级、交叉验证与失败渠道记录。</p></article>
+              <article><span>最终产出</span><p>全景报告、JSON 快照、3 份榜单 CSV，以及选题和数据采购建议。</p></article>
             </div>
-            <div class="work-grid" id="work-grid"></div>
+            <div class="case-findings">
+              <article><span>市场 · 置信度中</span><h3>头部平台继续扩大规模</h3><p>公开报告指向 Q1 2026 全球短剧 App 约 8.5 亿下载与 7.5 亿美元内购。</p></article>
+              <article><span>题材 · 置信度中-高</span><h3>狼人和复仇仍是稳定钩子</h3><p>狼人保持 Western 市场强势，重生复仇与女性觉醒信号继续上升。</p></article>
+              <article><span>增量 · 置信度中</span><h3>AI 短剧进入快速扩张期</h3><p>NetShort、DramaWave 等平台的 AI 内容和素材投放形成新增观察线。</p></article>
+            </div>
+            <div class="case-footer"><p><strong>限制：</strong>首次采集，缺少付费数据商原始榜单和稳定的一手社交热榜；作品只列为观察名单。</p><div><a href="/downloads/2026-08-16-short-drama-market-report.md" download>下载完整报告</a><a href="/downloads/2026-08-16-short-drama-snapshot.json" download>下载 JSON</a></div></div>
           </div>
-          <div class="case-limit"><strong>限制</strong><p id="result-limit"></p></div>
-          <div class="result-actions" id="result-actions"></div>
-        </div>
+        </details>
+
+        <details class="case-instance">
+          <summary>
+            <span class="case-number">02</span>
+            <span class="case-summary"><small>专题分析</small><strong>狼人 × 重生复仇题材机会评估</strong></span>
+            <span class="case-toggle"><span class="when-open">收起实例</span><span class="when-closed">展开完整实例</span></span>
+          </summary>
+          <div class="case-body">
+            <div class="case-context">
+              <article><span>任务输入</span><p>判断“狼人 + 重生复仇”是否值得作为下一批海外短剧的优先立项方向，并给出验证方案。</p></article>
+              <article><span>处理过程</span><p>筛选 6 类题材信号，对照 10 部作品，区分稳定母题、上升钩子和未经验证的组合假设。</p></article>
+              <article><span>最终产出</span><p>形成“值得小样测试、暂不直接重投”的中等置信度判断，并给出三版开场测试。</p></article>
+            </div>
+            <div class="case-findings">
+              <article><span>母题 · 置信度高</span><h3>狼人仍是稳定受众盘</h3><p>Alpha、Rejected Luna、Fated Mate 在多平台持续出现，是用户熟悉的世界观入口。</p></article>
+              <article><span>钩子 · 置信度中</span><h3>重生复仇信号上升</h3><p>被拒、背叛和身份翻转能增强前 30 秒冲突，但尚不能证明组合后一定提升付费。</p></article>
+              <article><span>决策 · 置信度中</span><h3>先测三版开场再立项</h3><p>测试婚礼被弃、死亡重生和 Alpha 身份揭露，比较留存、完播和付费点击。</p></article>
+            </div>
+            <div class="case-footer"><p><strong>限制：</strong>没有投放后台、完播率和付费转化数据，只支持小规模内容测试。</p><div><a href="/downloads/case-02-genre-opportunity.md" download>下载题材机会实例</a><a href="/downloads/2026-08-16-genre-trends.csv" download>下载题材 CSV</a></div></div>
+          </div>
+        </details>
+
+        <details class="case-instance">
+          <summary>
+            <span class="case-number">03</span>
+            <span class="case-summary"><small>决策分析</small><strong>ReelShort × DramaBox 平台竞品对比</strong></span>
+            <span class="case-toggle"><span class="when-open">收起实例</span><span class="when-closed">展开完整实例</span></span>
+          </summary>
+          <div class="case-body">
+            <div class="case-context">
+              <article><span>任务输入</span><p>比较 ReelShort 与 DramaBox 的市场位置、内容机会和数据风险，给出差异化切入建议。</p></article>
+              <article><span>处理过程</span><p>拆分年收入预测、季度 IAP、月收入估算与 MAU 口径，并对照内容方向和社区付费情绪。</p></article>
+              <article><span>最终产出</span><p>确认双寡头格局但拒绝混合口径排名，建议从强女主、复仇混合题材和透明付费切入。</p></article>
+            </div>
+            <div class="case-findings">
+              <article><span>规模 · 置信度中-高</span><h3>ReelShort 收入证据更强</h3><p>$1.05B 年收入预测由 8 个媒体来源共同指向 MPA；DramaBox 月收入仍是单源估算。</p></article>
+              <article><span>竞争 · 置信度中</span><h3>两者 Q1 IAP 接近</h3><p>现有摘要均指向约 $140M，但统计周期与地区口径仍需原始榜单复核。</p></article>
+              <article><span>切入 · 置信度中</span><h3>内容差异和付费信任更重要</h3><p>优先测试女性觉醒与复仇混合题材，同时减少金币墙和计费不透明。</p></article>
+            </div>
+            <div class="case-footer"><p><strong>限制：</strong>公开数字混有预测、估算和不同周期，本实例不是财务尽调。</p><div><a href="/downloads/case-03-platform-competition.md" download>下载竞品对比实例</a><a href="/downloads/2026-08-16-app-market.csv" download>下载平台 CSV</a></div></div>
+          </div>
+        </details>
       </div>
     </section>
 
