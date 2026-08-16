@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>短剧行情监控 Agent</title>
+  <meta name="description" content="监控海外短剧 App、作品、题材和社交信号，输出可追溯的趋势报告。">
+  <meta property="og:title" content="短剧行情监控 Agent">
+  <meta property="og:description" content="可追溯的海外短剧榜单、趋势变化和风险提示。">
+  <meta property="og:image" content="/assets/market-intelligence-hero.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="短剧行情监控 Agent 首页">
+        <span class="brand-mark">S</span>
+        <span>短剧行情监控 Agent</span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#capabilities">能力</a>
+        <a href="#demo">运行演示</a>
+        <a href="#sources">证据</a>
+      </nav>
+      <a class="nav-action" href="/downloads/2026-08-16-short-drama-market-report.md" download>下载报告</a>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Overseas short drama intelligence</p>
+        <h1><span>读懂海外短剧热度，</span><span>不替数据说谎</span></h1>
+        <p class="hero-text">监控作品、平台与题材信号，输出带来源、置信度和缺口的可追溯报告。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#demo">运行演示</a>
+          <a class="button button-secondary" href="#evidence">查看方法</a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="/assets/market-intelligence-hero.png" alt="海外短剧作品、世界地图和市场证据组成的研究台" width="1536" height="1024" fetchpriority="high">
+      </figure>
+    </section>
+
+    <section class="proof-strip" aria-label="运行状态">
+      <div><strong>1</strong><span>次飞书真实运行</span></div>
+      <div><strong>6+</strong><span>类公开来源</span></div>
+      <div><strong>5</strong><span>份可下载产出</span></div>
+      <div class="live-state"><span class="status-dot" aria-hidden="true"></span><strong>ONLINE</strong><span>公开演示可用</span></div>
+    </section>
+
+    <section class="section capabilities" id="capabilities">
+      <div class="section-heading">
+        <h2>从热闹里，留下能复核的信号</h2>
+        <p>收入、下载、播放和讨论量分开处理。单源信息只进入观察名单。</p>
+      </div>
+      <div class="capability-grid">
+        <article class="capability-large">
+          <span>跨渠道采集</span>
+          <h3>平台榜单、搜索趋势、社交讨论与行业报告</h3>
+          <p>每条记录保留采集时间、地区、指标、原始值与来源类型。</p>
+        </article>
+        <article class="capability-accent">
+          <span>趋势判断</span>
+          <h3>识别新上榜、持续上升和跨源共振</h3>
+        </article>
+        <article>
+          <span>证据分级</span>
+          <h3>官方、估算、媒体与社区观点分开标注</h3>
+        </article>
+        <article class="capability-image">
+          <img src="/assets/market-intelligence-hero.png" alt="短剧市场研究资料局部" width="1536" height="1024" loading="lazy">
+        </article>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="demo-intro">
+        <h2>运行一次公开演示</h2>
+        <p>演示读取 2026-08-16 的真实快照，不调用公开模型接口，不产生额外 Token 费用。</p>
+        <form id="demo-form" novalidate>
+          <label for="task">监控任务</label>
+          <textarea id="task" aria-describedby="task-help" rows="4">生成今日海外短剧行情试运行报告，并给出三条建议</textarea>
+          <p id="task-help" class="form-help">输入任务后，演示会返回已验证快照中的结构化结果。</p>
+          <p class="form-error" id="form-error" role="alert" hidden>请先输入监控任务。</p>
+          <button class="button button-primary" id="run-button" type="submit">开始运行</button>
+        </form>
+      </div>
+
+      <div class="run-panel" aria-live="polite">
+        <div class="empty-state" id="idle-state">
+          <span>READY</span>
+          <h3>等待任务</h3>
+          <p>运行后将显示市场变化、作品观察名单、题材趋势与数据缺口。</p>
+        </div>
+        <div class="loading-state" id="loading-state" aria-label="正在运行" hidden>
+          <div class="skeleton skeleton-wide"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton skeleton-short"></div>
+        </div>
+        <div class="empty-state error-state" id="error-state" hidden>
+          <span>INPUT REQUIRED</span>
+          <h3>任务不能为空</h3>
+          <p>补充一句你希望监控的市场问题，再次运行。</p>
+        </div>
+        <div class="result-state" id="result-state" hidden>
+          <div class="result-header">
+            <div><span>RUN COMPLETE</span><h3>海外短剧行情试运行报告</h3></div>
+            <strong>2026-08-16</strong>
+          </div>
+          <div class="finding-list">
+            <article>
+              <div><span>市场</span><b>置信度 中</b></div>
+              <h4>头部平台继续扩大规模</h4>
+              <p>公开报告指向 Q1 2026 全球短剧 App 约 8.5 亿下载与 7.5 亿美元内购。</p>
+            </article>
+            <article>
+              <div><span>题材</span><b>置信度 中-高</b></div>
+              <h4>狼人和复仇仍是稳定钩子</h4>
+              <p>狼人保持 Western 市场强势，重生复仇与女性觉醒信号继续上升。</p>
+            </article>
+            <article>
+              <div><span>增量</span><b>置信度 中</b></div>
+              <h4>AI 短剧进入快速扩张期</h4>
+              <p>NetShort、DramaWave 等平台的 AI 内容和素材投放形成新增观察线。</p>
+            </article>
+          </div>
+          <div class="works-block">
+            <div class="works-heading">
+              <h4>热门作品观察名单</h4>
+              <button type="button" id="toggle-works" aria-expanded="false">查看全部 10 部</button>
+            </div>
+            <div class="work-grid" id="work-grid"></div>
+          </div>
+          <div class="result-actions">
+            <a href="/downloads/2026-08-16-short-drama-market-report.md" download>下载完整报告</a>
+            <a href="/downloads/2026-08-16-short-drama-snapshot.json" download>下载 JSON 快照</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section evidence-section" id="evidence">
+      <div class="evidence-copy">
+        <h2>先说明证据，再给结论</h2>
+        <p>本次是首次试运行。作品列表属于观察名单，部分数字来自搜索摘要，不能替代数据商原始榜单。</p>
+        <a href="/downloads/2026-08-16-short-drama-market-report.md">阅读完整口径声明</a>
+      </div>
+      <div class="method-flow" aria-label="工作流程">
+        <div><strong>采集</strong><span>记录来源与失败原因</span></div>
+        <div><strong>规范</strong><span>统一作品名、地区和指标</span></div>
+        <div><strong>交叉验证</strong><span>区分多源信号与单源观察</span></div>
+        <div><strong>交付</strong><span>报告、JSON 与 CSV 同步保存</span></div>
+      </div>
+    </section>
+
+    <section class="section sources-section" id="sources">
+      <h2>当前证据网络</h2>
+      <div class="source-groups">
+        <div><strong>行业基准</strong><span>Sensor Tower、DataEye、MPA 公开摘要</span></div>
+        <div><strong>作品发现</strong><span>SceneTrace、ReelShort、DramaBox</span></div>
+        <div><strong>社交信号</strong><span>TikTok Creative Center、Reddit、YouTube</span></div>
+        <div><strong>交叉验证</strong><span>Google、DuckDuckGo、行业媒体</span></div>
+      </div>
+      <div class="limitations">
+        <strong>数据缺口</strong>
+        <p>缺少付费数据商原始榜单、稳定的一手社交热榜和历史时间序列。高影响商业数字仍需人工复核。</p>
+      </div>
+    </section>
+
+    <footer>
+      <div><strong>短剧行情监控 Agent</strong><span>Hermes Profile: short-drama-market</span></div>
+      <div class="footer-links">
+        <a href="/downloads/2026-08-16-short-drama-market-report.md">Markdown</a>
+        <a href="/downloads/2026-08-16-short-drama-snapshot.json">JSON</a>
+        <a href="#top">回到顶部</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

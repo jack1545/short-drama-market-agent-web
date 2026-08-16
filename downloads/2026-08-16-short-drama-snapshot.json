@@ -1,0 +1,56 @@
+{
+  "report_type": "试运行报告",
+  "report_date": "2026-08-16",
+  "region": "海外（全球/美国/东南亚/拉美为主）",
+  "collection_window": "2026-08-16 当日采集",
+  "channels": {
+    "primary": ["DuckDuckGo(经MiYa代理)", "Google(经本地Clash)", "Bing(国内地域受限)"],
+    "blocked_content_sites": ["variety.com", "screendaily.com", "deadline.com", "reelpulse.net", "sensortower.com", "apprank.io", "blog.insightrackr.com", "eu.36kr.com", "chinabizinsider.com"],
+    "note": "搜索引擎经代理稳定可达；媒体正文页大多触发数据中心IP反爬，仅采集到搜索结果标题+摘要"
+  },
+  "market_overview": [
+    {"indicator": "ReelShort 2026年预计收入", "value": "$1.05B", "change": "+34% YoY", "source_count": 8, "source": "Media Partners Asia报告，经variety/deadline/techtimes/headtopics/dealroom等转载", "confidence": "HIGH"},
+    {"indicator": "ReelShort 2026首次盈利(净利)", "value": "约$40M", "change": "首个规模级盈利(前一年亏$120M)", "source_count": 2, "source": "startupxo/headtopics 引MPA", "confidence": "MEDIUM"},
+    {"indicator": "海外微短剧收入(不含中国)", "value": "2026 $3.6B", "change": "2025 $2.7B→2026 $3.6B→2031 $9.5B", "source_count": 1, "source": "MPA报告，screendaily", "confidence": "MEDIUM"},
+    {"indicator": "海外短剧行业总规模", "value": "$6-9B(2026E)", "change": "2025约$3.6B，约翻倍", "source_count": 1, "source": "keeppay指南", "confidence": "LOW-MEDIUM"},
+    {"indicator": "短剧平台全球市场", "value": "$7.99B(2026E)", "change": "2025 $7.23B，CAGR 10.64%", "source_count": 1, "source": "360iresearch(含中国口径)", "confidence": "LOW"},
+    {"indicator": "短剧App Q1 2026 全局", "value": "850M下载 / $750M IAP", "change": "下载增长驱动转向全球化", "source_count": 1, "source": "reelpulse(Sensor Tower口径)", "confidence": "MEDIUM"},
+    {"indicator": "中国出海短剧收入(2026-05)", "value": "$229M", "change": "环比+13%", "source_count": 2, "source": "DataEye，经chinabizinsider/eu.36kr", "confidence": "MEDIUM"},
+    {"indicator": "中国出海AI剧广告投放", "value": "投放量+137%", "change": "AI剧广告素材激增；VibeShort下载+179%", "source_count": 1, "source": "DataEye，chinabizinsider", "confidence": "MEDIUM"}
+  ],
+  "app_market": [
+    {"rank": 1, "app": "ReelShort", "metric": "头部/收入一档", "detail": "$1.05B年化；Q1 IAP约$140M", "confidence": "HIGH"},
+    {"rank": 2, "app": "DramaBox", "metric": "头部/收入一档", "detail": "月收入约$20M、年化约$240M(Jul)；Q1 IAP近$140M", "confidence": "MEDIUM"},
+    {"rank": "双寡头合计", "app": "ReelShort+DramaBox", "metric": "占全球竖屏短剧IAP主导地位", "detail": "each MAU>50M；合计曾约70%全球IAP(Q1 2025)", "confidence": "MEDIUM"},
+    {"rank": "增长新贵-下载", "app": "FreeReels / NetShort", "metric": "downloads领涨", "detail": "NetShort上升；FreeReels领d下载(Q1 2026)", "confidence": "LOW-MEDIUM"},
+    {"rank": "增长新贵", "app": "StoryReel / BonusTV Pro", "metric": "快速上升(Jul)", "detail": "insightrackr 7月榜指出快速上升", "confidence": "LOW"},
+    {"rank": "中国出海", "app": "VibeShort / ShortMax等", "metric": "VibeShort下载+179%", "detail": "AI剧投放带动；13个短剧App进GooglePlay娱乐畅销Top50(2024年仅3个)", "confidence": "MEDIUM"}
+  ],
+  "top_works": [
+    {"title": "The Senator's Son", "platform": "ReelShort", "category": "位列2026热门", "sources_support": "reelpulse best-reelshort-shows摘要", "confidence": "MEDIUM"},
+    {"title": "Kingsley", "platform": "ReelShort", "category": "位列2026热门", "sources_support": "reelpulse", "confidence": "MEDIUM"},
+    {"title": "King or Clown", "platform": "ReelShort", "category": "位列2026热门", "sources_support": "reelpulse", "confidence": "MEDIUM"},
+    {"title": "Harper Reeves", "platform": "ReelShort", "category": "位列2026热门", "sources_support": "reelpulse", "confidence": "MEDIUM"},
+    {"title": "Divorced at the Wedding Day", "platform": "DramaBox", "category": "位列2026热门", "sources_support": "reelpulse best-dramabox-shows", "confidence": "MEDIUM"},
+    {"title": "The Princess of His Heart", "platform": "DramaBox", "category": "位列2026热门", "sources_support": "reelpulse", "confidence": "MEDIUM"},
+    {"title": "Fated to My Forbidden Alpha", "platform": "ReelShort/多平台", "category": "狼人类标杆", "sources_support": "phill.ai报告 + 搜索印证", "confidence": "MEDIUM"},
+    {"title": "Not the Bride He Wanted", "platform": "多平台", "category": "狼人/被拒的新娘", "sources_support": "pinedrama.actor", "confidence": "LOW-MEDIUM"},
+    {"title": "Rejected Luna Is the Alpha Queen", "platform": "多平台", "category": "狼人/重生复仇", "sources_support": "pinedrama.actor", "confidence": "LOW-MEDIUM"},
+    {"title": "My Cold Revenge", "platform": "多平台", "category": "狼人/复仇", "sources_support": "dailymotion viral频道", "confidence": "LOW"}
+  ],
+  "top_works_note": "作品榜为搜索摘要层级的单源/少量来源证据，未取得完整Top10官方/数据商版单，名次与量级无法精确定序。属'观察名单'而非确定性Top10。",
+  "genre_trends": [
+    {"genre": "狼人(Alpha/Rejected Luna/Fated Mate)", "trend": "持续霸榜，Western市场最大受众", "evidence": "phill.ai/philippine报告；多平台狼人剧存量", "confidence": "HIGH"},
+    {"genre": "亿万富翁CEO/契约婚姻", "trend": "长青主流", "evidence": "multiple榜单类型描述", "confidence": "HIGH"},
+    {"genre": "重生/复仇/逆袭", "trend": "上升", "evidence": "knetst/china出海内容", "confidence": "MEDIUM"},
+    {"genre": "黑帮(Mafia)", "trend": "上升", "evidence": "thisreels/theshillongtimes", "confidence": "MEDIUM"},
+    {"genre": "女性觉醒/强女主", "trend": "上升", "evidence": "DramaBox 7月清单/dramaboxdb趋势", "confidence": "MEDIUM"},
+    {"genre": "AI生成短剧", "trend": "迅猛增量", "evidence": "NetShort&DramaWave占全球AI短剧Top100的60%；广告素材1.52M组；狼人题材16部入AI榜", "confidence": "MEDIUM"}
+  ],
+  "risk_notes": [
+    "收入/下载等U口径(全美DAILY)无法精确定序 — 待人工复核与数据商原始榜单",
+    "同名作品/译名别名合并不确定性 — 待用户确认",
+    "ReelShort $1.2B(vs $1.05B)与DramaBox $1.2B等数字存在口径差异，需区分预测vs估算",
+    "所有正文页因反爬未直接复核，均为'搜索结果摘要'层级证据"
+  ]
+}
